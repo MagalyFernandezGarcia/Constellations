@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="stylesheet" href="./gallerie.css" />
+		<script defer src="../apiToken.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script defer src="../Space/space.js"></script>
+		<script defer src="./BurgerMenu.js"></script>
+	</head>
+	<body>
+		<header class="desktop">
+			<div>
+				<a href="./gallerie.html" class="home">
+					<img src="../images/logo.svg" alt="logo" class="logo" />
+				</a>
+				<h1>Les constellations</h1>
+			</div>
+			<div>
+				<a href="./presentation/presentation.html">Présentation du site</a>
+				<a href="./list/list.html">Liste</a>
+				<a href="./tips/tips.html">Tips</a>
+				<a href="./memory/memory.html">Memory</a>
+				<a href="./contact/contact.html">Contact</a>
+			</div>
+		</header>
+
+		<header class="phone">
+			<div>
+				<a href="../gallerie.html">
+					<img src="../../images/logo.svg" alt="logo" class="logo" />
+				</a>
+				<h1>Les constellations</h1>
+			</div>
+			<div class="offScreenMenu">
+				<div class="links">
+					<div>
+						<img
+							src="../images/whiteStar.png"
+							alt="petite étoile"
+							class="starMenu"
+						/>
+						<a href="./presentation/presentation.html">Présentation du site</a>
+					</div>
+					<div>
+						<img
+							src="../images/whiteStar.png"
+							alt="petite étoile"
+							class="starMenu"
+						/>
+						<a href="./list/list.html">Liste</a>
+					</div>
+					<div>
+						<img
+							src="../images/whiteStar.png"
+							alt="petite étoile"
+							class="starMenu"
+						/>
+						<a href="./tips/tips.html">Tips</a>
+					</div>
+					<div>
+						<img
+							src="../images/whiteStar.png"
+							alt="petite étoile"
+							class="starMenu"
+						/>
+						<a href="./memory/memory.html">Memory</a>
+					</div>
+					<div>
+						<img
+							src="../images/whiteStar.png"
+							alt="petite étoile"
+							class="starMenu"
+						/>
+						<a href="./contact/contact.html">Contact</a>
+					</div>
+				</div>
+			</div>
+			<nav>
+				<div class="burgerMenu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<h2 class="instructions">
+				Clique sur une image pour obtenir des informations sur la constellation
+			</h2>
+			<img src="../images/hubble.png" alt="hubble" class="hubble" id="hubble" />
+			<h3 id="constellationName">Aries</h3>
+
+			<div>
+				<div class="chevronLeft">
+					<img
+						src="../images/chevron-left-solid.svg"
+						alt="flèche droite"
+						id="previous"
+						class="previous"
+					/>
+				</div>
+				<div class="chevronRight">
+					<img
+						src="../images/chevron-right-solid.svg"
+						alt="flèche gauche"
+						id="next"
+						class="next"
+					/>
+				</div>
+
+				<img
+					src="../images/aries-constellation-01.jpg"
+					alt=""
+					id="imgConstellation"
+					class="imgConstellation"
+				/>
+			</div>
+			<button class="phone moreInfo">Plus d'info</button>
+			<div id="modalHubble" class="modal">
+				<div class="modalHubbleContent" id="modalHubbleContent"></div>
+			</div>
+			<div id="modalConstellation" class="modal">
+				<div class="accordion-body">
+					<button class="close">X</button>
+					<div class="accordion" id="accordion"></div>
+				</div>
+			</div>
+		</main>
+
+		<footer></footer>
+	</body>
+</html>
