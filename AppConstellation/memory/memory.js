@@ -1,5 +1,5 @@
 const cardAll = document.querySelectorAll(".card");
-import constellationsJSON from "./FakeAPI/constellations.js";
+import constellationsJSON from "../../FakeAPI/constellations.js";
 
 let count = 0;
 

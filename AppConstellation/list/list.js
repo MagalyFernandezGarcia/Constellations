@@ -1,4 +1,4 @@
-import constellationsJSON from "./FakeAPI/constellations.js";
+import constellationsJSON from "../../FakeAPI/constellations.js";
 const modalConstellation = document.getElementById("modalConstellation");
 
 const createLinkName = (constellation) => {

@@ -37,8 +37,8 @@ NEXT.addEventListener("pointerup", () => {
 		divConstellationName.innerText = arrayOfCOnstellations[currentIndex].name;
 	
 });
+//my apiKey is dead, I'll not refreshing it
 const getNasaImage = async () => {
-	//my apiKey is dead, I'll not refreshing it
 	const res = await axios.get(nasaAPI);
 	return res.data;
 };
@@ -71,9 +71,9 @@ const activateAccordion = () => {
 	}
 };
 
-IMG_CONSTELLATION.addEventListener("click", async () => {
+IMG_CONSTELLATION.addEventListener("click",  () => {
 	modalConstellation.style.display = "block";
-	const constellationInfo = await getConstellations();
+	const constellationInfo = constellationsJSON;
 	const actualConst = constellationInfo[currentIndex];
 
 	const accordionContent = document.querySelector(".accordion");
