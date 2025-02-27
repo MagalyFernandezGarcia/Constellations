@@ -1,4 +1,4 @@
-const jsonAPi = "http://localhost:3000/";
+const jsonAPi = "https://constellations-vert.vercel.app/";
 const modalConstellation = document.getElementById("modalConstellation");
 const getConstellations = async () => {
 	try {
