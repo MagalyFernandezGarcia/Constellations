@@ -38,7 +38,7 @@ NEXT.addEventListener("pointerup", () => {
 	
 });
 //my apiKey is dead, I'll not refreshing it
-const getNasaImage = async () => {
+/* const getNasaImage = async () => {
 	const res = await axios.get(nasaAPI);
 	return res.data;
 };
@@ -59,7 +59,7 @@ hubble.addEventListener("pointerup", async () => {
 	closeHubble.addEventListener("click", () => {
 		modalHubble.style.display = "none";
 	});
-});
+}); */
 
 const activateAccordion = () => {
 	const accordion = document.getElementsByClassName("container");
