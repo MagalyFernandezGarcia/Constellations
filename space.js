@@ -1,25 +1,20 @@
 const IMG_CONSTELLATION = document.getElementById("imgConstellation");
 const PREVIOUS = document.getElementById("previous");
 const NEXT = document.getElementById("next");
-const jsonAPi = "https://constellations-vert.vercel.app/";
+import constellationsJSON from "./constellations.json";
 const divConstellationName = document.getElementById("constellationName");
 const hubble = document.getElementById("hubble");
 const modalHubble = document.getElementById("modalHubble");
 const modalConstellation = document.getElementById("modalConstellation");
 
-const getConstellations = async () => {
-	try {
-		const res = await axios.get(jsonAPi + "constellations");
-		return res.data;
-	} catch (error) {}
-};
+
 
 let currentIndex = 0;
 
-PREVIOUS.addEventListener("pointerup", async () => {
-	try {
+PREVIOUS.addEventListener("pointerup",  () => {
+	
 		currentIndex--;
-		const arrayOfCOnstellations = await getConstellations();
+		const arrayOfCOnstellations = constellationsJSON;
 
 		if (currentIndex < 0) {
 			currentIndex = arrayOfCOnstellations.length - 1;
@@ -27,26 +22,23 @@ PREVIOUS.addEventListener("pointerup", async () => {
 
 		IMG_CONSTELLATION.src = arrayOfCOnstellations[currentIndex].image;
 		divConstellationName.innerText = arrayOfCOnstellations[currentIndex].name;
-	} catch (error) {
-		console.error(error);
-	}
+	
 });
 
-NEXT.addEventListener("pointerup", async () => {
-	try {
+NEXT.addEventListener("pointerup", () => {
+	
 		currentIndex++;
-		const arrayOfCOnstellations = await getConstellations();
+		const arrayOfCOnstellations = constellationsJSON;
 
 		if (currentIndex === arrayOfCOnstellations.length) {
 			currentIndex = 0;
 		}
 		IMG_CONSTELLATION.src = arrayOfCOnstellations[currentIndex].image;
 		divConstellationName.innerText = arrayOfCOnstellations[currentIndex].name;
-	} catch (error) {
-		console.error(error);
-	}
+	
 });
 const getNasaImage = async () => {
+	//my apiKey is dead, I'll not refreshing it
 	const res = await axios.get(nasaAPI);
 	return res.data;
 };
