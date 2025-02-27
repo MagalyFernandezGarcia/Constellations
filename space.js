@@ -3,8 +3,8 @@ const PREVIOUS = document.getElementById("previous");
 const NEXT = document.getElementById("next");
 import constellationsJSON from "./FakeAPI/constellations.js";
 const divConstellationName = document.getElementById("constellationName");
-const hubble = document.getElementById("hubble");
-const modalHubble = document.getElementById("modalHubble");
+/* const hubble = document.getElementById("hubble"); */
+/* const modalHubble = document.getElementById("modalHubble"); */
 const modalConstellation = document.getElementById("modalConstellation");
 
 
@@ -155,6 +155,6 @@ IMG_CONSTELLATION.addEventListener("click",  () => {
 const closeButton = document.querySelector(".close");
 
 closeButton.addEventListener("click", () => {
-	modalHubble.style.display = "none";
+	/* modalHubble.style.display = "none"; */
 	modalConstellation.style.display = "none";
 });
