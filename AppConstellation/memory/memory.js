@@ -1,5 +1,5 @@
 const cardAll = document.querySelectorAll(".card");
-const jsonAPi = "http://localhost:3000/";
+import constellationsJSON from "./FakeAPI/constellations.js";
 
 let count = 0;
 
@@ -19,18 +19,10 @@ const initialise = async () => {
 	selectImg(arrayOfrandomConstellations());
 };
 
-const getConstellations = async () => {
-	try {
-		const res = await axios.get(jsonAPi + "constellations");
 
-		return res.data;
-	} catch (error) {
-		console.error(error);
-	}
-};
 
-const arrayOfrandomConstellations = async () => {
-	const arrayOfConstellations = await getConstellations();
+const arrayOfrandomConstellations = () => {
+	const arrayOfConstellations = constellationsJSON;
 
 	const finalArray = [];
 	for (let i = 0; i < 4; i++) {

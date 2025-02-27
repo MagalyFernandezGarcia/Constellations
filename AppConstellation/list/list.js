@@ -1,13 +1,6 @@
-const jsonAPi = "https://constellations-vert.vercel.app/";
+import constellationsJSON from "./FakeAPI/constellations.js";
 const modalConstellation = document.getElementById("modalConstellation");
-const getConstellations = async () => {
-	try {
-		const res = await axios.get(jsonAPi + "constellations");
-		return res.data;
-	} catch (error) {
-		console.log(error);
-	}
-};
+
 const createLinkName = (constellation) => {
 	const hemisphere = document.querySelector(`.${constellation.hemisphere}`);
 	const season = hemisphere.querySelector(`.${constellation.season}`);
@@ -31,13 +24,13 @@ const createLinkName = (constellation) => {
 };
 
 const organiseConstellation = async () => {
-	try {
-		const allConstellation = await getConstellations();
+	
+		const allConstellation = constellationsJSON;
 
 		allConstellation.forEach((constellation) => {
 			createLinkName(constellation);
 		});
-	} catch (error) {}
+	
 };
 
 organiseConstellation();
