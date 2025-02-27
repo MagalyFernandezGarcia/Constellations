@@ -1,4 +1,4 @@
-export const constellations =[{"name" : "Aries",
+const constellations =[{"name" : "Aries",
 
 "image" : "../images/aries-constellation-01.jpg",
 "imageConstellation" : "../images/aries-constellation-stars.jpg",
@@ -450,6 +450,7 @@ export const constellations =[{"name" : "Aries",
 
 ]
 
+export default constellations
 
 
 
